@@ -24,4 +24,25 @@ describe("Agent Skills Infrastructure", () => {
       expect(frontmatter.description).toBeDefined();
     });
   });
+
+  const kmSkills = ["daily-review", "weekly-synthesis", "inbox-processor"];
+  kmSkills.forEach(skill => {
+    describe(`${skill} skill`, () => {
+      const skillPath = `.gemini/skills/${skill}/SKILL.md`;
+
+      test("SKILL.md should exist", () => {
+        expect(existsSync(skillPath)).toBe(true);
+      });
+
+      test("SKILL.md should have valid frontmatter", () => {
+        const content = readFileSync(skillPath, "utf-8");
+        const parts = content.split("---");
+        expect(parts.length).toBeGreaterThanOrEqual(3);
+        
+        const frontmatter = parse(parts[1]);
+        expect(frontmatter.name).toBe(skill);
+        expect(frontmatter.description).toBeDefined();
+      });
+    });
+  });
 });
