@@ -10,7 +10,7 @@
     - *Verification:* `bun install` runs successfully.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Environment & Configuration' (Protocol in workflow.md)
 
-## Phase 2: Cross-Platform Bootstrap Script
+## Phase 2: Cross-Platform Bootstrap Script [checkpoint: fffd972]
 
 - [x] Task: Implement `scripts/bootstrap.ts` - Setup & Validation 6d103bc
     - *Context:* Create the script entry point. Implement OS detection and Environment Variable validation (`GEMINI_API_KEY`).
