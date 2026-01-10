@@ -12,7 +12,7 @@
 
 ## Phase 2: Cross-Platform Bootstrap Script
 
-- [ ] Task: Implement `scripts/bootstrap.ts` - Setup & Validation
+- [x] Task: Implement `scripts/bootstrap.ts` - Setup & Validation 6d103bc
     - *Context:* Create the script entry point. Implement OS detection and Environment Variable validation (`GEMINI_API_KEY`).
     - *TDD:* Write tests to mock different OS environments and missing keys.
 - [ ] Task: Implement `scripts/bootstrap.ts` - Installation & Directory Structure
