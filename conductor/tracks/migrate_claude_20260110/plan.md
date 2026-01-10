@@ -29,7 +29,7 @@
 
 ## Phase 4: Cleanup
 
-- [~] Task: Final verification and removal of `.claude` directory
+- [x] Task: Final verification and removal of `.claude` directory 977db2b
     - *Context:* Confirm all functionality is replicated in `.gemini` and purge the old configuration.
     - *Verification:* Run `bun test` for all migration tests. Ensure `/skills list` shows all migrated skills.
 - [ ] Task: Conductor - User Manual Verification 'Phase 4: Cleanup' (Protocol in workflow.md)
