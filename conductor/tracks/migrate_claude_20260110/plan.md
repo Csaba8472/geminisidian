@@ -1,6 +1,6 @@
 # Plan: Migrate .claude to .gemini (Agent Skills)
 
-## Phase 1: Infrastructure & Core Skill
+## Phase 1: Infrastructure & Core Skill [checkpoint: fbe0e44]
 
 - [x] Task: Initialize `.gemini/skills` and implement `thinking-partner` skill f308228
     - *Context:* Create the directory structure and the core persona that defines Geminisidian's identity.
