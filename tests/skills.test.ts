@@ -25,7 +25,7 @@ describe("Agent Skills Infrastructure", () => {
     });
   });
 
-  const kmSkills = ["daily-review", "weekly-synthesis", "inbox-processor", "research-assistant", "add-frontmatter"];
+  const kmSkills = ["daily-review", "weekly-synthesis", "inbox-processor", "research-assistant", "add-frontmatter", "init-bootstrap", "upgrade"];
   kmSkills.forEach(skill => {
     describe(`${skill} skill`, () => {
       const skillPath = `.gemini/skills/${skill}/SKILL.md`;
