@@ -1,4 +1,6 @@
 import { platform } from "os";
+import { existsSync, mkdirSync } from "fs";
+import { spawnSync } from "bun";
 
 export function getOS() {
   const p = platform();
@@ -14,18 +16,42 @@ export function validateEnv() {
   return true;
 }
 
+export function ensureDirectories() {
+    const dirs = ["06_Metadata/Threads"];
+    for (const dir of dirs) {
+        if (!existsSync(dir)) {
+            console.log(`Creating directory: ${dir}`);
+            mkdirSync(dir, { recursive: true });
+        }
+    }
+}
+
+export function installDependencies() {
+    console.log("Installing dependencies...");
+    const result = spawnSync(["bun", "install"], { 
+        stdio: ["inherit", "inherit", "inherit"] 
+    });
+    return result.success;
+}
+
 async function main() {
     console.log(`Detected OS: ${getOS()}`);
     try {
         validateEnv();
         console.log("Environment validation passed.");
+        ensureDirectories();
+        if (installDependencies()) {
+            console.log("Bootstrap completed successfully!");
+        } else {
+            console.error("Installation failed.");
+            process.exit(1);
+        }
     } catch (e: any) {
         console.error(`Error: ${e.message}`);
         process.exit(1);
     }
 }
 
-// Only run if this file is executed directly
 if (import.meta.main) {
   main();
 }
