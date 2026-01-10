@@ -5,7 +5,7 @@
 - [x] Task: Create `bunfig.toml` and configure `tsconfig.json` for Bun (Strict Mode) a1af3a5
     - *Context:* Define the compiler options and runtime behavior.
     - *Verification:* `bun run tsc --noEmit` should pass on a dummy file.
-- [ ] Task: Clean and Migrate `package.json`
+- [x] Task: Clean and Migrate `package.json` d60f27a
     - *Context:* Remove Node/pnpm specifics. Add `bun` types. Update scripts to use `bun`.
     - *Verification:* `bun install` runs successfully.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Environment & Configuration' (Protocol in workflow.md)
