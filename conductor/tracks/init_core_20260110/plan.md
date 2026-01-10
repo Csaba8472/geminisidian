@@ -2,7 +2,7 @@
 
 ## Phase 1: Environment & Configuration
 
-- [ ] Task: Create `bunfig.toml` and configure `tsconfig.json` for Bun (Strict Mode)
+- [x] Task: Create `bunfig.toml` and configure `tsconfig.json` for Bun (Strict Mode) a1af3a5
     - *Context:* Define the compiler options and runtime behavior.
     - *Verification:* `bun run tsc --noEmit` should pass on a dummy file.
 - [ ] Task: Clean and Migrate `package.json`
