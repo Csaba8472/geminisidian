@@ -9,10 +9,10 @@
 
 ## Phase 2: Knowledge Management Skills
 
-- [ ] Task: Migrate `daily-review`, `weekly-synthesis`, and `inbox-processor`
+- [~] Task: Migrate `daily-review`, `weekly-synthesis`, and `inbox-processor`
     - *Context:* Port the procedural logic for reviewing notes and processing the PARA inbox into separate skills.
     - *TDD:* Verify each skill directory has a `SKILL.md`. Test any helper scripts using Bun.
-- [ ] Task: Migrate `research-assistant` and `add-frontmatter`
+- [x] Task: Migrate `research-assistant` and `add-frontmatter` ae5d5af
     - *Context:* Port specialized skills for knowledge expansion and metadata management.
     - *TDD:* Verify `SKILL.md` presence and frontmatter validity.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Knowledge Management Skills' (Protocol in workflow.md)
