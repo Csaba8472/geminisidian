@@ -18,8 +18,7 @@ To transform the existing Claudesidian project into **Geminisidian**: a cross-pl
 - **Automated Organization:** Utilize Gemini to assist in processing the inbox, organizing attachments, and maintaining vault health.
 
 ## Key Features
-- **Gemini Commands:** A suite of custom commands (e.g., `/daily-review`, `/research-assistant`) optimized for the Gemini CLI.
-- **Dual-Script Architecture:** Parallel `.ps1` and `.sh` scripts for all background tasks (transcript extraction, vault stats, attachment handling).
+    - **Agent Skills:** A suite of specialized Agent Skills (e.g., `daily-review`, `thinking-partner`, `research-assistant`) that provide procedural guidance and expertise for vault management.- **Dual-Script Architecture:** Parallel `.ps1` and `.sh` scripts for all background tasks (transcript extraction, vault stats, attachment handling).
 - **Intelligent Inbox Processing:** AI-assisted classification and moving of notes into the PARA structure.
 - **Cross-Platform Setup:** A robust bootstrap process that detects the operating system and sets up the environment (Node.js, Pnpm, Gemini API keys).
 

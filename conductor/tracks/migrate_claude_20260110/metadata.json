@@ -1,8 +1,0 @@
-{
-  "track_id": "migrate_claude_20260110",
-  "type": "chore",
-  "status": "new",
-  "created_at": "2026-01-10T10:34:00Z",
-  "updated_at": "2026-01-10T10:34:00Z",
-  "description": "migrate .claude folder to .gemini. check how these concepts can be moved to gemini based on the docs: https://geminicli.com/docs"
-}

@@ -11,7 +11,8 @@
 ## AI & Integration
 - **Primary AI Interface:** **Gemini CLI** (The main interface for executing custom commands and vault interactions).
 - **Custom Commands:** Leveraged via Gemini CLI configuration for optimized prompt shortcuts.
-- **Agent Skills:** Defined using the Gemini CLI Skills system (https://geminicli.com/docs/cli/skills/) to create specialized agents with distinct capabilities for vault management, research, and data processing.
+- **Agent Skills:** Defined using the Gemini CLI Skills system (https://geminicli.com/docs/cli/skills/) to create specialized agents. Currently implemented: `thinking-partner`, `daily-review`, `weekly-synthesis`, `inbox-processor`, `research-assistant`, `add-frontmatter`, `init-bootstrap`, `upgrade`.
+- **MCP Servers:** Local MCP servers (e.g., `gemini-vision`) integrated for multimodal capabilities.
 - **SDKs:** Google Generative AI SDK (for direct API access when necessary) and Model Context Protocol (MCP) for tool-based AI capabilities.
 
 ## Environment & Platform
