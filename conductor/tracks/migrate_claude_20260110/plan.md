@@ -9,7 +9,7 @@
 
 ## Phase 2: Knowledge Management Skills [checkpoint: 93a245e]
 
-- [~] Task: Migrate `daily-review`, `weekly-synthesis`, and `inbox-processor`
+- [x] Task: Migrate `daily-review`, `weekly-synthesis`, and `inbox-processor` b8e64da
     - *Context:* Port the procedural logic for reviewing notes and processing the PARA inbox into separate skills.
     - *TDD:* Verify each skill directory has a `SKILL.md`. Test any helper scripts using Bun.
 - [x] Task: Migrate `research-assistant` and `add-frontmatter` ae5d5af
@@ -19,10 +19,10 @@
 
 ## Phase 3: System & Utility Skills
 
-- [ ] Task: Migrate `init-bootstrap` and `upgrade`
+- [x] Task: Migrate `init-bootstrap` and `upgrade` cbceb20
     - *Context:* Ensure the project maintenance commands are available as Gemini skills.
     - *TDD:* Verify `SKILL.md` and script execution via Bun.
-- [ ] Task: Migrate and register `gemini-vision.mjs` MCP server
+- [x] Task: Migrate and register `gemini-vision.mjs` MCP server cbceb20
     - *Context:* Move the vision server to a permanent location and register it in the Gemini CLI configuration.
     - *TDD:* Verify the MCP server starts correctly using `bun`.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: System & Utility Skills' (Protocol in workflow.md)
