@@ -17,7 +17,7 @@
     - *TDD:* Verify `SKILL.md` presence and frontmatter validity.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Knowledge Management Skills' (Protocol in workflow.md)
 
-## Phase 3: System & Utility Skills
+## Phase 3: System & Utility Skills [checkpoint: 35b8585]
 
 - [x] Task: Migrate `init-bootstrap` and `upgrade` cbceb20
     - *Context:* Ensure the project maintenance commands are available as Gemini skills.
