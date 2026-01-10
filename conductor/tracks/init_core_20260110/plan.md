@@ -1,6 +1,6 @@
 # Plan: Initialize Geminisidian Core
 
-## Phase 1: Environment & Configuration
+## Phase 1: Environment & Configuration [checkpoint: 0d64f98]
 
 - [x] Task: Create `bunfig.toml` and configure `tsconfig.json` for Bun (Strict Mode) a1af3a5
     - *Context:* Define the compiler options and runtime behavior.
