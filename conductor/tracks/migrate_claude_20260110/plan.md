@@ -7,7 +7,7 @@
     - *TDD:* Write a test to verify `.gemini/skills/thinking-partner/SKILL.md` exists and contains valid YAML frontmatter with name and description.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Infrastructure & Core Skill' (Protocol in workflow.md)
 
-## Phase 2: Knowledge Management Skills
+## Phase 2: Knowledge Management Skills [checkpoint: 93a245e]
 
 - [~] Task: Migrate `daily-review`, `weekly-synthesis`, and `inbox-processor`
     - *Context:* Port the procedural logic for reviewing notes and processing the PARA inbox into separate skills.
