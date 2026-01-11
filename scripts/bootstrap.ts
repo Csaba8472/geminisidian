@@ -1,5 +1,5 @@
 import { platform } from "os";
-import { existsSync, mkdirSync, copyFileSync, readdirSync, lstatSync, rmSync, writeFileSync } from "fs";
+import { existsSync, mkdirSync, copyFileSync, readdirSync, lstatSync, rmSync } from "fs";
 import { join, resolve } from "path";
 import { spawnSync } from "bun";
 import { createInterface } from "readline";
@@ -122,56 +122,6 @@ async function handleVaultImport() {
     }
 }
 
-async function handlePersonalization() {
-    console.log("\n🎨 Vault Personalization");
-    console.log("   Let's set up your core organizational structure (PARA Method).");
-
-    // Projects
-    console.log("\n   1️⃣  Projects: Short-term efforts with a specific goal and deadline.");
-    const projectsInput = await question("   What active projects are you working on? (comma-separated, e.g., Website Redesign, Trip to Japan)\n   > ");
-    if (projectsInput.trim()) {
-        const projects = projectsInput.split(',').map(s => s.trim()).filter(Boolean);
-        for (const proj of projects) {
-            const dir = join("01_Projects", proj);
-            if (!existsSync(dir)) {
-                mkdirSync(dir, { recursive: true });
-                writeFileSync(join(dir, "README.md"), `# ${proj}\n\nProject overview and tasks.`);
-                console.log(`   Created Project: ${proj}`);
-            }
-        }
-    }
-    
-    // Areas
-    console.log("\n   2️⃣  Areas: Ongoing responsibilities without an end date.");
-    const areasInput = await question("   What are your main Areas of Responsibility? (comma-separated, e.g., Health, Finances, Career)\n   > ");
-    if (areasInput.trim()) {
-        const areas = areasInput.split(',').map(s => s.trim()).filter(Boolean);
-        for (const area of areas) {
-            const dir = join("02_Areas", area);
-            if (!existsSync(dir)) {
-                mkdirSync(dir, { recursive: true });
-                writeFileSync(join(dir, "README.md"), `# ${area}\n\nStandard and ongoing responsibilities for ${area}.`);
-                console.log(`   Created Area: ${area}`);
-            }
-        }
-    }
-
-    // Resources
-    console.log("\n   3️⃣  Resources: Topics or themes of ongoing interest.");
-    const resourcesInput = await question("   What are your main Topics/Resources? (comma-separated, e.g., Tech, Cooking, History)\n   > ");
-    if (resourcesInput.trim()) {
-        const resources = resourcesInput.split(',').map(s => s.trim()).filter(Boolean);
-        for (const res of resources) {
-            const dir = join("03_Resources", res);
-            if (!existsSync(dir)) {
-                mkdirSync(dir, { recursive: true });
-                writeFileSync(join(dir, "README.md"), `# ${res}\n\nResources and reference material for ${res}.`);
-                console.log(`   Created Resource: ${res}`);
-            }
-        }
-    }
-}
-
 async function checkApiKey() {
     if (!process.env.GEMINI_API_KEY) {
         console.log("\n🔑 Gemini API Key Setup");
@@ -199,8 +149,6 @@ async function main() {
         await checkApiKey();
         
         ensureDirectories();
-
-        await handlePersonalization();
         
         await handleVaultImport();
         
