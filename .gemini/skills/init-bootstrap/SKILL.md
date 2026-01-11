@@ -17,7 +17,7 @@ Use this skill to guide a new user through the complete setup of their Geminisid
 
 ### Phase 2: Repository Reset
 1.  **Disconnect from Origin**: Ask the user if they want to detach from the original `geminisidian` repository to start their own fresh git history (Recommended for personal vaults).
-    *   *Action*: If yes, run `rm -rf .git && git init && git add . && git commit -m "Initial commit: Geminisidian Bootstrap"`.
+    *   *Action*: If yes, run `bun run scripts/git-reset.ts`.
     *   *Action*: If no (they want to contribute back), skip this.
 
 ### Phase 3: Intelligent Analysis (The Brain)
