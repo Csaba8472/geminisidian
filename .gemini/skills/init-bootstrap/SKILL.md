@@ -55,7 +55,8 @@ Use this skill to guide a new user through the complete setup of their Geminisid
     *   Project specific conventions.
     *   Commands they might use often.
 2.  **Cleanup**: Ask if they want to move files from `OLD_VAULT` into the new `00_Inbox` or `04_Archive` immediately, or leave them for manual sorting.
-3.  **Finish**: Run `git status` to show them the final state. Remind them to run `/daily-review` at the end of the day.
+3.  **Agents.md**: Create an `AGENTS.md` file in the root directory following the standards at https://agents.md/. This file should describe the vault's purpose, the user's preferences, and how AI agents should interact with this specific second brain.
+4.  **Finish**: Run `git status` to show them the final state. Remind them to run `/daily-review` at the end of the day.
 
 ## <AVAILABLE_RESOURCES>
 - `scripts/bootstrap.ts`: Handles dependency install and bulk file copying.

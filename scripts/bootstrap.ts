@@ -51,17 +51,20 @@ export function installDependencies() {
     return result.success;
 }
 
-function copyFolderSync(from: string, to: string) {
+function copyFolderSync(from: string, to: string, options: { excludeObsidian?: boolean } = { excludeObsidian: true }) {
     if (!existsSync(to)) mkdirSync(to, { recursive: true });
 
     if (getOS() === "win32") {
         const absTo = resolve(to);
         // Robocopy is more robust on Windows for deep paths
+        const excludeDirs = [".git", "node_modules"];
+        if (options.excludeObsidian) excludeDirs.push(".obsidian");
+
         const args = [
             from, 
             absTo, 
             "/E", 
-            "/XD", ".git", "node_modules", ".obsidian", 
+            "/XD", ...excludeDirs, 
             "/R:0", "/W:0",
             "/NFL", "/NDL", "/NJH", "/NJS"
         ];
@@ -79,7 +82,8 @@ function copyFolderSync(from: string, to: string) {
     
     const elements = readdirSync(from);
     for (const element of elements) {
-        if (element === ".git" || element === "node_modules" || element === ".obsidian") continue;
+        if (element === ".git" || element === "node_modules") continue;
+        if (options.excludeObsidian && element === ".obsidian") continue;
         
         const stat = lstatSync(join(from, element));
         const dest = join(to, element);
@@ -87,7 +91,7 @@ function copyFolderSync(from: string, to: string) {
         if (stat.isFile()) {
             copyFileSync(join(from, element), dest);
         } else if (stat.isDirectory()) {
-            copyFolderSync(join(from, element), dest);
+            copyFolderSync(join(from, element), dest, options);
         }
     }
 }
@@ -111,6 +115,13 @@ async function handleVaultImport() {
             console.log(`   Copying from ${cleanPath} to OLD_VAULT/...`);
             try {
                 copyFolderSync(cleanPath, "OLD_VAULT");
+                
+                const obsidianPath = join(cleanPath, ".obsidian");
+                if (existsSync(obsidianPath)) {
+                    console.log("   Found .obsidian configuration. Migrating settings...");
+                    copyFolderSync(obsidianPath, ".obsidian", { excludeObsidian: false });
+                }
+                
                 console.log("   ✅ Import complete!");
             } catch (error: any) {
                 console.error(`   ❌ Error importing vault: ${error.message}`);
