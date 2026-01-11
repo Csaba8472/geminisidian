@@ -13,8 +13,9 @@ function run(command: string[], description: string, ignoreError = false) {
 console.log("\n🔄 Git Repository Reset");
 
 try {
-    // 0. Disable line-ending warnings temporarily
+    // 0. Disable line-ending warnings and enable long paths
     run(["git", "config", "core.autocrlf", "false"], "Disabling autocrlf warnings");
+    run(["git", "config", "core.longpaths", "true"], "Enabling long paths support");
 
     // 1. Remove remote 'origin' to detach from upstream
     run(["git", "remote", "remove", "origin"], "Removing remote 'origin'", true);
