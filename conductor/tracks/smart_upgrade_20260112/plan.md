@@ -8,7 +8,7 @@
 
 ## Phase 2: Safety, Scanning & Audit
 - [x] Task: Implement `BackupService` to create timestamped backups of system files (scripts, .gemini, config). [b68835d]
-- [ ] Task: Implement `FileScanner` to identify system files and strictly exclude content folders (00_Inbox, 01_Projects, etc.).
+- [x] Task: Implement `FileScanner` to identify system files and strictly exclude content folders (00_Inbox, 01_Projects, etc.). [762a654]
 - [ ] Task: Implement `AuditLogger` to generate and update `.upgrade-checklist.md`.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Safety, Scanning & Audit' (Protocol in workflow.md)
 
