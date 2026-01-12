@@ -12,11 +12,11 @@
 - [x] Task: Implement `AuditLogger` to generate and update `.upgrade-checklist.md`. [f0385df]
 - [x] Task: Conductor - User Manual Verification 'Phase 2: Safety, Scanning & Audit' (Protocol in workflow.md) [3309138]
 
-## Phase 3: AI-Powered Automated Merging
+## Phase 3: AI-Powered Automated Merging [checkpoint: bb11b80]
 - [x] Task: Implement `ChangeDetector` to identify files requiring merging vs. safe overwriting. [a02564b]
 - [x] Task: Implement `GeminiMergeService` to perform automated semantic merges using the Gemini API. [9743595]
 - [x] Task: Implement the `UpgradeOrchestrator` to execute the main loop (Safe Update -> AI Merge -> Log). [e074f3e]
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: AI-Powered Automated Merging' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 3: AI-Powered Automated Merging' (Protocol in workflow.md) [bb11b80]
 
 ## Phase 4: CLI Integration & Finalization
 - [ ] Task: Create `scripts/upgrade.ts` entry point handling `check`, `force`, and standard upgrade flags.
