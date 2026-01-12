@@ -3,7 +3,7 @@
 ## Phase 1: Foundation & Versioning
 - [x] Task: Implement `GitHubReleaseService` to fetch latest version and download assets using `Bun.fetch`. [6f1af9a]
 - [x] Task: Implement `VersionService` to compare local `package.json` against remote release tags. [f983c37]
-- [ ] Task: Implement cross-platform `ArchiveService` (using a TS-native library) to extract releases to `.tmp/`.
+- [x] Task: Implement cross-platform `ArchiveService` (using a TS-native library) to extract releases to `.tmp/`. [566eed6]
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Foundation & Versioning' (Protocol in workflow.md)
 
 ## Phase 2: Safety, Scanning & Audit
