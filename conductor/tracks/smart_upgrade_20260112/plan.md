@@ -1,7 +1,7 @@
 # Plan: Smart Upgrade System implementation
 
 ## Phase 1: Foundation & Versioning
-- [~] Task: Implement `GitHubReleaseService` to fetch latest version and download assets using `Bun.fetch`.
+- [x] Task: Implement `GitHubReleaseService` to fetch latest version and download assets using `Bun.fetch`. [6f1af9a]
 - [ ] Task: Implement `VersionService` to compare local `package.json` against remote release tags.
 - [ ] Task: Implement cross-platform `ArchiveService` (using a TS-native library) to extract releases to `.tmp/`.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Foundation & Versioning' (Protocol in workflow.md)
