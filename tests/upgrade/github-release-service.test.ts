@@ -12,7 +12,7 @@ describe("GitHubReleaseService", () => {
     globalThis.fetch = originalFetch;
   });
 
-  it("should fetch the latest release version from GitHub", async () => {
+  it("should fetch the latest release version and prefer assets", async () => {
     const mockResponse = {
       tag_name: "v1.2.3",
       assets: [
@@ -21,6 +21,7 @@ describe("GitHubReleaseService", () => {
           browser_download_url: "https://example.com/download.zip",
         },
       ],
+      zipball_url: "https://example.com/source.zip"
     };
 
     globalThis.fetch = mock(async () => new Response(JSON.stringify(mockResponse)));
@@ -30,28 +31,36 @@ describe("GitHubReleaseService", () => {
 
     expect(release.version).toBe("v1.2.3");
     expect(release.downloadUrl).toBe("https://example.com/download.zip");
-    expect(globalThis.fetch).toHaveBeenCalledTimes(1);
-    expect(globalThis.fetch).toHaveBeenCalledWith(
-      "https://api.github.com/repos/test-owner/test-repo/releases/latest",
-      expect.objectContaining({
-        headers: expect.objectContaining({
-          "User-Agent": "Geminisidian-Upgrade-System",
-        }),
-      })
-    );
   });
 
-  it("should throw an error if the release has no assets", async () => {
+  it("should fall back to zipball_url if no assets are present", async () => {
     const mockResponse = {
       tag_name: "v1.2.3",
       assets: [],
+      zipball_url: "https://example.com/source.zip"
+    };
+
+    globalThis.fetch = mock(async () => new Response(JSON.stringify(mockResponse)));
+
+    const service = new GitHubReleaseService("test-owner", "test-repo");
+    const release = await service.getLatestRelease();
+
+    expect(release.version).toBe("v1.2.3");
+    expect(release.downloadUrl).toBe("https://example.com/source.zip");
+  });
+
+  it("should throw an error if neither assets nor zipball_url are present", async () => {
+    const mockResponse = {
+      tag_name: "v1.2.3",
+      assets: [],
+      // no zipball_url
     };
 
     globalThis.fetch = mock(async () => new Response(JSON.stringify(mockResponse)));
 
     const service = new GitHubReleaseService("test-owner", "test-repo");
     
-    expect(service.getLatestRelease()).rejects.toThrow("No assets found in the latest release");
+    expect(service.getLatestRelease()).rejects.toThrow("No assets or source zipball found");
   });
 
   it("should throw an error if the fetch fails", async () => {

@@ -11,6 +11,7 @@ interface GitHubAsset {
 interface GitHubRelease {
   tag_name: string;
   assets: GitHubAsset[];
+  zipball_url: string;
 }
 
 export class GitHubReleaseService {
@@ -32,21 +33,21 @@ export class GitHubReleaseService {
 
     const data = await response.json() as GitHubRelease;
 
-    if (!data.assets || data.assets.length === 0) {
-      throw new Error("No assets found in the latest release");
-    }
+    let downloadUrl: string;
 
-    // Prefer zipball or tarball if explicit assets aren't what we want, but usually release assets are built.
-    // For this implementation, we take the first asset or look for a zip.
-    // Let's assume we want the first asset for now, or refine if multiple exist.
-    // Spec says "download assets", usually a source code zip is automatically provided by GitHub as 'zipball_url',
-    // but the test expects an asset. Let's return the first asset's url.
-    
-    const asset = data.assets[0];
+    if (data.assets && data.assets.length > 0) {
+        // If there are assets, prefer a zip file if available, otherwise take the first one
+        const zipAsset = data.assets.find(a => a.name.endsWith('.zip'));
+        downloadUrl = zipAsset ? zipAsset.browser_download_url : data.assets[0].browser_download_url;
+    } else if (data.zipball_url) {
+        downloadUrl = data.zipball_url;
+    } else {
+        throw new Error("No assets or source zipball found in the latest release");
+    }
 
     return {
       version: data.tag_name,
-      downloadUrl: asset.browser_download_url,
+      downloadUrl: downloadUrl,
     };
   }
 
