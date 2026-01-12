@@ -1,6 +1,14 @@
-import { expect, test, describe } from "bun:test";
+import { expect, test, describe, mock } from "bun:test";
+import { existsSync } from "fs";
+
+// Mock Bun's spawnSync before importing the module under test
+mock.module("bun", () => {
+  return {
+    spawnSync: () => ({ success: true, exitCode: 0 }),
+  };
+});
+
 import { ensureDirectories, installDependencies } from "../scripts/bootstrap";
-import { existsSync, rmSync } from "fs";
 
 describe("Bootstrap - Installation & Directory Structure", () => {
   test("ensureDirectories should create 06_Metadata/Threads", () => {
