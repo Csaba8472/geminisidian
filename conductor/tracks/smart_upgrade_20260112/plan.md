@@ -13,7 +13,7 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 2: Safety, Scanning & Audit' (Protocol in workflow.md) [3309138]
 
 ## Phase 3: AI-Powered Automated Merging
-- [ ] Task: Implement `ChangeDetector` to identify files requiring merging vs. safe overwriting.
+- [x] Task: Implement `ChangeDetector` to identify files requiring merging vs. safe overwriting. [a02564b]
 - [ ] Task: Implement `GeminiMergeService` to perform automated semantic merges using the Gemini API.
 - [ ] Task: Implement the `UpgradeOrchestrator` to execute the main loop (Safe Update -> AI Merge -> Log).
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: AI-Powered Automated Merging' (Protocol in workflow.md)
