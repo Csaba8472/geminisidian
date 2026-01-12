@@ -19,7 +19,7 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 3: AI-Powered Automated Merging' (Protocol in workflow.md) [bb11b80]
 
 ## Phase 4: CLI Integration & Finalization
-- [ ] Task: Create `scripts/upgrade.ts` entry point handling `check`, `force`, and standard upgrade flags.
+- [x] Task: Create `scripts/upgrade.ts` entry point handling `check`, `force`, and standard upgrade flags. [6668e67]
 - [ ] Task: Implement post-upgrade verification (version update, cleanup of `.tmp/`).
 - [ ] Task: Update `package.json` to include the `upgrade` script.
 - [ ] Task: Conductor - User Manual Verification 'Phase 4: CLI Integration & Finalization' (Protocol in workflow.md)
