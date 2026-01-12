@@ -19,7 +19,8 @@
     "attachments:recent": "find 05_Attachments -type f -mtime -7 -exec ls -la {} \\;",
     "attachments:create-organized": "mkdir -p 05_Attachments/Organized",
     "transcript:extract": ".scripts/transcript-extract.sh",
-    "vault:stats": ".scripts/vault-stats.sh"
+    "vault:stats": ".scripts/vault-stats.sh",
+    "upgrade": "bun run scripts/upgrade.ts"
   },
   "keywords": [
     "obsidian",
