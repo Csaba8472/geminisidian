@@ -7,7 +7,7 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Foundation & Versioning' (Protocol in workflow.md) [6e690ec]
 
 ## Phase 2: Safety, Scanning & Audit
-- [ ] Task: Implement `BackupService` to create timestamped backups of system files (scripts, .gemini, config).
+- [x] Task: Implement `BackupService` to create timestamped backups of system files (scripts, .gemini, config). [b68835d]
 - [ ] Task: Implement `FileScanner` to identify system files and strictly exclude content folders (00_Inbox, 01_Projects, etc.).
 - [ ] Task: Implement `AuditLogger` to generate and update `.upgrade-checklist.md`.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Safety, Scanning & Audit' (Protocol in workflow.md)
