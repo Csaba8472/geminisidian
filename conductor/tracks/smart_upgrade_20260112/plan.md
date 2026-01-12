@@ -6,11 +6,11 @@
 - [x] Task: Implement cross-platform `ArchiveService` (using a TS-native library) to extract releases to `.tmp/`. [566eed6]
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Foundation & Versioning' (Protocol in workflow.md) [6e690ec]
 
-## Phase 2: Safety, Scanning & Audit
+## Phase 2: Safety, Scanning & Audit [checkpoint: 3309138]
 - [x] Task: Implement `BackupService` to create timestamped backups of system files (scripts, .gemini, config). [b68835d]
 - [x] Task: Implement `FileScanner` to identify system files and strictly exclude content folders (00_Inbox, 01_Projects, etc.). [762a654]
 - [x] Task: Implement `AuditLogger` to generate and update `.upgrade-checklist.md`. [f0385df]
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Safety, Scanning & Audit' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Safety, Scanning & Audit' (Protocol in workflow.md) [3309138]
 
 ## Phase 3: AI-Powered Automated Merging
 - [ ] Task: Implement `ChangeDetector` to identify files requiring merging vs. safe overwriting.
