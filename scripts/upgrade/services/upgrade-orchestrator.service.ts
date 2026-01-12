@@ -18,7 +18,7 @@ export class UpgradeOrchestrator {
     private logger: AuditLogger
   ) {}
 
-  async execute(): Promise<OrchestratorResult> {
+  async execute(dryRun = false): Promise<OrchestratorResult> {
     let processed = 0;
     let errors = 0;
 
@@ -30,40 +30,46 @@ export class UpgradeOrchestrator {
 
         switch (change.type) {
           case "NoChange":
-            // We don't increment processed for no-change to keep it clean, or we do?
-            // The test expects 2 processed if there are 2 files.
-            await this.logger.logEntry(relativePath, "Skipped", "Identical to upstream");
+            if (!dryRun) await this.logger.logEntry(relativePath, "Skipped", "Identical to upstream");
             break;
 
           case "SafeUpdate":
-            const upstreamContent = fs.readFileSync(change.upstreamPath);
-            this.writeFile(change.localPath, upstreamContent);
-            await this.logger.logEntry(relativePath, "Updated", "New or unmodified file");
+            if (!dryRun) {
+              const upstreamContent = fs.readFileSync(change.upstreamPath);
+              this.writeFile(change.localPath, upstreamContent);
+              await this.logger.logEntry(relativePath, "Updated", "New or unmodified file");
+            } else {
+              console.log(`[Check] Would update: ${relativePath}`);
+            }
             break;
 
           case "MergeNeeded":
-            const localText = fs.readFileSync(change.localPath, "utf8");
-            const upstreamText = fs.readFileSync(change.upstreamPath, "utf8");
-            
-            try {
-              const mergedText = await this.merger.merge(relativePath, localText, upstreamText);
-              this.writeFile(change.localPath, mergedText);
-              await this.logger.logEntry(relativePath, "Merged", "AI-assisted merge successful");
-            } catch (mergeError) {
-              console.error(`Merge failed for ${relativePath}:`, mergeError);
-              await this.logger.logEntry(relativePath, "Error", `Merge failed: ${mergeError instanceof Error ? mergeError.message : String(mergeError)}`);
-              errors++;
+            if (!dryRun) {
+              const localText = fs.readFileSync(change.localPath, "utf8");
+              const upstreamText = fs.readFileSync(change.upstreamPath, "utf8");
+              
+              try {
+                const mergedText = await this.merger.merge(relativePath, localText, upstreamText);
+                this.writeFile(change.localPath, mergedText);
+                await this.logger.logEntry(relativePath, "Merged", "AI-assisted merge successful");
+              } catch (mergeError) {
+                console.error(`Merge failed for ${relativePath}:`, mergeError);
+                await this.logger.logEntry(relativePath, "Error", `Merge failed: ${mergeError instanceof Error ? mergeError.message : String(mergeError)}`);
+                errors++;
+              }
+            } else {
+              console.log(`[Check] Would merge: ${relativePath}`);
             }
             break;
 
           case "DeletedUpstream":
-            await this.logger.logEntry(relativePath, "Skipped", "Deleted upstream (retained locally)");
+            if (!dryRun) await this.logger.logEntry(relativePath, "Skipped", "Deleted upstream (retained locally)");
             break;
         }
         processed++;
       } catch (err) {
         console.error(`Error processing ${relativePath}:`, err);
-        await this.logger.logEntry(relativePath, "Error", err instanceof Error ? err.message : String(err));
+        if (!dryRun) await this.logger.logEntry(relativePath, "Error", err instanceof Error ? err.message : String(err));
         errors++;
       }
     }
