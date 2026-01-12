@@ -18,8 +18,8 @@
 - [x] Task: Implement the `UpgradeOrchestrator` to execute the main loop (Safe Update -> AI Merge -> Log). [e074f3e]
 - [x] Task: Conductor - User Manual Verification 'Phase 3: AI-Powered Automated Merging' (Protocol in workflow.md) [bb11b80]
 
-## Phase 4: CLI Integration & Finalization
+## Phase 4: CLI Integration & Finalization [checkpoint: e561dda]
 - [x] Task: Create `scripts/upgrade.ts` entry point handling `check`, `force`, and standard upgrade flags. [6668e67]
 - [x] Task: Implement post-upgrade verification (version update, cleanup of `.tmp/`). [6668e67]
 - [x] Task: Update `package.json` to include the `upgrade` script. [a0a545a]
-- [ ] Task: Conductor - User Manual Verification 'Phase 4: CLI Integration & Finalization' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 4: CLI Integration & Finalization' (Protocol in workflow.md) [e561dda]
