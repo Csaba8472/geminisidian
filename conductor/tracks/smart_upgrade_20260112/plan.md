@@ -15,7 +15,7 @@
 ## Phase 3: AI-Powered Automated Merging
 - [x] Task: Implement `ChangeDetector` to identify files requiring merging vs. safe overwriting. [a02564b]
 - [x] Task: Implement `GeminiMergeService` to perform automated semantic merges using the Gemini API. [9743595]
-- [ ] Task: Implement the `UpgradeOrchestrator` to execute the main loop (Safe Update -> AI Merge -> Log).
+- [x] Task: Implement the `UpgradeOrchestrator` to execute the main loop (Safe Update -> AI Merge -> Log). [e074f3e]
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: AI-Powered Automated Merging' (Protocol in workflow.md)
 
 ## Phase 4: CLI Integration & Finalization
