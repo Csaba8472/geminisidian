@@ -1,10 +1,10 @@
 # Plan: Smart Upgrade System implementation
 
-## Phase 1: Foundation & Versioning
+## Phase 1: Foundation & Versioning [checkpoint: 6e690ec]
 - [x] Task: Implement `GitHubReleaseService` to fetch latest version and download assets using `Bun.fetch`. [6f1af9a]
 - [x] Task: Implement `VersionService` to compare local `package.json` against remote release tags. [f983c37]
 - [x] Task: Implement cross-platform `ArchiveService` (using a TS-native library) to extract releases to `.tmp/`. [566eed6]
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Foundation & Versioning' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Foundation & Versioning' (Protocol in workflow.md) [6e690ec]
 
 ## Phase 2: Safety, Scanning & Audit
 - [ ] Task: Implement `BackupService` to create timestamped backups of system files (scripts, .gemini, config).
