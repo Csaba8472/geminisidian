@@ -69,6 +69,23 @@ Or trigger one of the specialized **Agent Skills**:
 - "Process my inbox" (activates `inbox-processor`)
 - "Deep dive into [topic]" (activates `research-assistant`)
 
+## Keeping Up to Date
+
+Geminisidian includes a smart upgrade system that keeps your vault's automation tools current while protecting your local notes and customizations.
+
+```bash
+# Preview what would be updated
+bun run upgrade check
+
+# Perform the upgrade with AI-powered semantic merging
+bun run upgrade
+```
+
+The upgrade system:
+- **Backs up** your configuration and scripts before any changes.
+- **Intelligently merges** upstream updates with your local customizations using Gemini.
+- **Maintains an audit log** in `.upgrade-checklist.md` so you can review every change.
+
 ## Folder Structure
 
 ```
@@ -97,7 +114,7 @@ Geminisidian comes with pre-configured AI expertise:
 - **weekly-synthesis**: Find patterns and recurring themes in your week.
 - **add-frontmatter**: Intelligently manage note metadata and YAML properties.
 - **init-bootstrap**: Re-run the interactive setup wizard.
-- **upgrade**: Intelligently update Geminisidian while preserving your notes.
+- **upgrade**: Launch the AI-powered upgrade orchestrator to sync with upstream.
 
 ## Vision & Document Analysis
 
@@ -120,6 +137,7 @@ Run these with `bun run`:
 - `attachments:organized` - Count organized files.
 - `attachments:unprocessed` - Count remaining files to process.
 - `vault:stats` - Show vault statistics.
+- `upgrade` - Run the Smart Upgrade System.
 
 ## Philosophy
 
