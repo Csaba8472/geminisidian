@@ -6,6 +6,7 @@ description: Intelligently upgrades Geminisidian with new features while preserv
 # Upgrade Skill
 
 Use this skill to update Geminisidian to the latest version.
+Geminisidian releases are here: https://github.com/Csaba8472/geminisidian/releases
 
 ## Task
 

@@ -1,6 +1,6 @@
 {
   "name": "geminisidian",
-  "version": "0.1.0",
+  "version": "1.0.2",
   "description": "Gemini CLI + Obsidian Starter Kit - AI-powered second brain",
   "type": "module",
   "scripts": {
