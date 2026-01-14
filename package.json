@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "setup": "bun run scripts/bootstrap.ts",
-    "test-gemini": "GEMINI_API_KEY=${GEMINI_API_KEY} bun run .claude/mcp-servers/gemini-vision.mjs",
+    "test-gemini": "GEMINI_API_KEY=${GEMINI_API_KEY} bun run .gemini/mcp-servers/gemini-vision.mjs",
     "lint": "eslint --config .config/eslint.config.js . --fix && prettier --config .config/.prettierrc.js --write .",
     "lint:check": "eslint --config .config/eslint.config.js . && prettier --config .config/.prettierrc.js --check .",
     "format": "prettier --config .config/.prettierrc.js --write .",

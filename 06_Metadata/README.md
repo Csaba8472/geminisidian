@@ -17,7 +17,7 @@ The metadata folder contains:
 06_Metadata/
 ├── Reference/         # Guides and documentation
 ├── Templates/        # Note templates
-├── Agents/          # Claude Code agent configs
+├── Skills/          # Gemini Skills configs
 ├── Workflows/       # Documented processes
 └── Archive/        # Old configurations
 ```
@@ -26,7 +26,7 @@ The metadata folder contains:
 
 ### Reference
 - This vault's documentation
-- Claude Code prompt library
+- Gemini prompt library
 - Style guides
 - Workflow documentation
 - Learning resources
@@ -57,7 +57,7 @@ The metadata folder contains:
 2. Create new note
 3. Paste and fill in
 
-### With Claude Code
+### With Gemini
 ```
 Create a new project using the project template.
 Name it [Project Name] and put it in 01_Projects.
@@ -85,13 +85,13 @@ You are a [role description].
 - Always do Y
 ```
 
-Then reference in Claude Code:
+Then reference in Gemini:
 ```
 Use the instructions in 06_Metadata/Agents/[agent].md
 and help me with [task].
 ```
 
-## Claude Code Prompts
+## Gemini Prompts
 
 ### Template Usage
 ```

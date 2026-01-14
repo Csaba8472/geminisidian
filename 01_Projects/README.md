@@ -36,7 +36,7 @@ Project_Name/
 └── Output/          # Final deliverables
 ```
 
-## Claude Code Workflows
+## Gemini Workflows
 
 ### Starting a Project
 ```
@@ -89,7 +89,7 @@ Then help me archive it properly.
 ## Tips for Success
 
 - **Start with clear objectives** - Vague projects never end
-- **Use the template** - Consistency helps Claude Code help you
+- **Use the template** - Consistency helps Gemini help you
 - **Log progress daily** - Even "no progress" is worth noting
 - **Review weekly** - Keep projects on track
 - **Complete or kill** - Don't let projects linger

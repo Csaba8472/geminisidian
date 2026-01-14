@@ -20,7 +20,7 @@ with Gemini CLI, enabling you to:
 
 ```bash
 # Clone with your preferred folder name (replace 'my-vault' with any name you like)
-git clone https://github.com/heyitsnoah/claudesidian.git my-vault
+git clone https://github.com/Csaba8472/geminisidian.git my-vault
 cd my-vault
 ```
 
@@ -145,6 +145,10 @@ Run these with `bun run`:
 2. **Local files = full control**
 3. **Structure enables creativity**
 4. **The goal is insight, not just information**
+
+## Acknowledgments
+
+This project is built upon the foundation of [Claudesidian](https://github.com/heyitsnoah/claudesidian) by [@heyitsnoah](https://github.com/heyitsnoah). Huge thanks for creating the original concept and structure that made Geminisidian possible. Your work on integrating AI assistants with Obsidian vaults was the inspiration and basis for this project.
 
 ## License
 

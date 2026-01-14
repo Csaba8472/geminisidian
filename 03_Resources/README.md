@@ -48,7 +48,7 @@ Resources are **reference materials** that:
 - Self-contained understanding
 - Heavily linked to related ideas
 
-## Claude Code Workflows
+## Gemini Workflows
 
 ### Building Knowledge
 ```
@@ -91,7 +91,7 @@ Search my resources for relevant cases.
 - Third pass: Create summary at top
 - Fourth pass: Extract to own note
 
-## Claude Code Prompts
+## Gemini Prompts
 
 ### Knowledge Audit
 ```
@@ -164,4 +164,4 @@ One paragraph overview
 
 ## Remember
 
-Resources are your external brain. The value isn't in collecting, but in connecting and creating. Use Claude Code to help you see patterns and build understanding across your entire knowledge base.
+Resources are your external brain. The value isn't in collecting, but in connecting and creating. Use Gemini to help you see patterns and build understanding across your entire knowledge base.

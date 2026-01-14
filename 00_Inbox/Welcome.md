@@ -4,30 +4,33 @@ This is your Inbox - a temporary landing zone for new ideas, quick captures, and
 
 ## Your First Steps
 
-1. **Start Claude Code** in this directory
-2. **Tell it you're in thinking mode**: "I'm exploring [topic] in thinking mode"
+1. **Use Gemini CLI** in this directory
+2. **Activate the Thinking Partner skill**: `activate_skill("thinking-partner")`
 3. **Let it search and ask questions** to help you think
 4. **Capture insights** as you go
 
-## Quick Tips
+## Available Skills
 
-- Don't worry about organization initially - just capture
-- Process your inbox weekly (move items to Projects/Areas/Resources)
-- Use Daily Notes for stream-of-consciousness capture
-- Let Claude Code help you find connections
+Geminisidian comes with specialized skills to help you manage your vault:
+
+- **Thinking Partner**: Explore complex problems (`thinking-partner`)
+- **Day Planner**: Plan your day based on projects and energy (`day-planner`)
+- **Research Assistant**: Analyze and synthesize information (`research-assistant`)
+- **Daily Review**: End-of-day capture and reflection (`daily-review`)
+- **Weekly Synthesis**: Identify patterns and breakthroughs (`weekly-synthesis`)
+- **Inbox Processor**: Organize using PARA method (`inbox-processor`)
+- **Add Frontmatter**: Enhance note organization (`add-frontmatter`)
 
 ## Try This Now
 
-Ask Claude Code:
+Ask Gemini:
 ```
-I'm new to this vault. Can you help me understand 
-how to use you as a thinking partner? 
-Let's explore a topic I'm curious about.
+Help me organize my inbox using the inbox-processor skill.
 ```
 
 ## Remember
 
-The goal isn't to create perfect notes - it's to enhance your thinking. This system grows more valuable over time as you add more notes and Claude Code helps you discover connections you didn't see before.
+The goal isn't to create perfect notes - it's to enhance your thinking. This system grows more valuable over time as you add more notes and Gemini helps you discover connections you didn't see before.
 
 ---
 *Move this to Archive once you're comfortable with the system*

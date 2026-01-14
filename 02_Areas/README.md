@@ -44,7 +44,7 @@ Area_Name/
 └── Ideas/           # Future possibilities
 ```
 
-## Claude Code Workflows
+## Gemini Workflows
 
 ### Area Review
 ```
@@ -98,11 +98,11 @@ How might they inform each other?
 - Clean up old notes
 
 ### Quarterly
-- Deep review with Claude Code
+- Deep review with Gemini
 - Adjust focus areas
 - Archive outdated material
 
-## Claude Code Prompts
+## Gemini Prompts
 
 ### Health Check
 ```
@@ -133,4 +133,4 @@ Where could better integration create value?
 
 ## Remember
 
-Areas are the backdrop of your life. They don't complete, but they evolve. Use Claude Code to help you see patterns and maintain balance across all your responsibilities.
+Areas are the backdrop of your life. They don't complete, but they evolve. Use Gemini to help you see patterns and maintain balance across all your responsibilities.

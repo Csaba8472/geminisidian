@@ -97,7 +97,7 @@ The Archive stores:
 - See also: [[Related project]]
 ```
 
-## Claude Code Workflows
+## Gemini Workflows
 
 ### Archive Project
 
@@ -147,7 +147,7 @@ What would need updating?
 - Keep summaries accessible
 - Delete true junk
 
-## Claude Code Prompts
+## Gemini Prompts
 
 ### Historical Analysis
 
@@ -198,5 +198,4 @@ What patterns predict failure?
 ## Remember
 
 The Archive is your institutional memory. It's not about holding onto
-everything, but about preserving what might inform future work. Use Claude Code
-to help you see patterns across time and extract wisdom from experience.
+everything, but about preserving what might inform future work. Use Gemini to help you see patterns across time and extract wisdom from experience.

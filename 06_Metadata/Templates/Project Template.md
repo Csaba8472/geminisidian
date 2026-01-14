@@ -20,7 +20,7 @@
 <!-- Links to relevant notes, documents, people -->
 
 ## Progress Log
-<!-- Claude Code will help maintain this -->
+<!-- Gemini will help maintain this -->
 
 ### {{date}} - Project Initiated
 - Set up project structure
@@ -37,4 +37,4 @@
 - [ ] 
 
 ---
-*Using Claude Code? Say: "I'm working on {{title}} in thinking mode. Let's explore."*
+*Using Gemini? Say: "I'm working on {{title}} in thinking mode. Let's explore."*

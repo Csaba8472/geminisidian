@@ -1,6 +1,6 @@
-# Common Claude Code Prompts
+# Common Gemini Prompts
 
-A collection of useful prompts for working with Claude Code in your vault.
+A collection of useful prompts for working with Gemini in your vault.
 
 ## Starting Work
 
@@ -164,7 +164,7 @@ Help me develop this into something more concrete.
 
 ## Remember
 
-- Claude Code has access to your entire vault
+- Gemini has access to your entire vault
 - It can create, edit, and organize files
 - Use it as a thinking partner, not just a tool
 - The best prompts emerge from your specific needs

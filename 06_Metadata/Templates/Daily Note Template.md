@@ -21,4 +21,4 @@
 - 
 
 ---
-*End of day: Ask Claude Code to review and find connections*
+*End of day: Ask Gemini to review and find connections*

@@ -27,22 +27,23 @@ Every week, review your inbox and:
 - Archive completed items to `04_Archive/`
 - Delete what's no longer relevant
 
-## Claude Code Commands
+## Gemini Skills
 
 ### Quick Capture
+Tell Gemini:
 ```
 Create a new note in 00_Inbox called [title] 
 with these thoughts: [content]
 ```
 
 ### Process Inbox
+Activate the `inbox-processor` skill:
 ```
-Review all notes in 00_Inbox.
-Help me decide where each should go 
-based on the PARA method.
+I want to process my inbox.
 ```
 
 ### Find Connections
+Activate the `research-assistant` or `thinking-partner` skill:
 ```
 Look at recent notes in my inbox.
 What patterns or themes do you see?

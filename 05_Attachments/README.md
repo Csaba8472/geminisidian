@@ -57,7 +57,7 @@ Run these with `pnpm`:
 ### Organization
 - `attachments:create-organized` - Create Organized folder
 
-## Claude Code Workflows
+## Gemini Workflows
 
 ### Process Screenshots
 ```
@@ -120,7 +120,7 @@ What can be compressed or removed?
 5. **Link**: Update references in notes
 6. **Clean**: Remove orphaned files
 
-## Claude Code Prompts
+## Gemini Prompts
 
 ### Vision Analysis
 ```
@@ -172,4 +172,4 @@ files_over_10mb/
 
 ## Remember
 
-Attachments support your notes, they don't replace them. A well-named, well-organized attachment is worth a thousand random screenshots. Use Claude Code's vision capabilities to help process and organize visual content efficiently.
+Attachments support your notes, they don't replace them. A well-named, well-organized attachment is worth a thousand random screenshots. Use Gemini's vision capabilities to help process and organize visual content efficiently.
